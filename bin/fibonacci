@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+begin
+  require(File.expand_path(File.join(File.dirname(__FILE__), "..", "lib", "fibonacci")))
+rescue LoadError
+  begin
+    require 'rubygems'
+    require 'fibonacci'
+  rescue LoadError
+    $stderr.puts("Could not load the fibonacci gem.")
+    exit(1)
+  end
+end
+
+puts(Fibonacci.number(ARGV.first.to_i))
