@@ -11,6 +11,21 @@ module Fibonacci
       number(nth - 1) + number(nth - 2)
     end
   end
+  
+  # returns the series of fibonacci in an array
+  def list(nth)
+    result = []
+    if nth > 0
+      (1..nth).each do |i|
+        if i > 2  
+          result << result[-1] + result[-2]
+        else
+          result << number(i)  
+        end
+      end
+    end
+    result
+  end
 
   VERSION="1.0.0"
 end
