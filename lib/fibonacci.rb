@@ -11,4 +11,6 @@ module Fibonacci
       number(nth - 1) + number(nth - 2)
     end
   end
+
+  VERSION="1.0.0"
 end
