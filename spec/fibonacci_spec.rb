@@ -6,4 +6,8 @@ describe Fibonacci do
       Fibonacci.number(nth).should == number
     end
   end
+
+  it "Fibonacci#list returns a list with the N first numbers in the series" do
+    Fibonacci.list(5).should == [1,1,2,3,5]
+  end
 end
